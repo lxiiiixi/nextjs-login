@@ -5,6 +5,8 @@ import useModal from '../hooks/useModal'
 import { Icon } from '@iconify/react';
 import LoginByNext from '../layouts/LoginByNext';
 import LoginByAuth from '../layouts/LoginByAuth';
+import LoginByWagmi from '../layouts/LoginByWagmi';
+import LoginByWeb3React from '../layouts/LoginByWeb3React';
 
 export default function Home() {
   const [showModal, setShow, onClose, stopPropagation] = useModal()
@@ -14,6 +16,8 @@ export default function Home() {
     <main className={styles.main}>
 
       <div className="card clay bg-pink text-xl" onClick={(e) => { setShow(e); setChildren(<LoginByAuth />) }}>Sign In By Auth</div>
+      <div className="card clay bg-pink text-xl" onClick={(e) => { setShow(e); setChildren(<LoginByWagmi />) }}>Sign In By Wagmi</div>
+      <div className="card clay bg-pink text-xl" onClick={(e) => { setShow(e); setChildren(<LoginByWeb3React />) }}>Sign In By Wagmi</div>
       <div className="card clay bg-pink text-xl" onClick={(e) => { setShow(e); setChildren(<LoginByNext />) }}>Sign In By Next Api</div>
 
       {/* 一个简陋的自定义modal */}

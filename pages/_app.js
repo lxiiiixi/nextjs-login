@@ -1,9 +1,18 @@
-import Head from 'next/head'
 import { SessionProvider } from "next-auth/react"
+import { RainbowKitProvider } from "@rainbow-me/rainbowkit";
+import { chains, wagmiClient } from "../config/WagmiConfig/wagmi";
+import { WagmiConfig } from "wagmi";
+import Head from 'next/head'
+import '@rainbow-me/rainbowkit/styles.css';
 import '../styles/globals.scss'
 import 'animate.css';
 
 export default function App({ Component, pageProps: { session, ...pageProps } }) {
+
+  const demoAppInfo = {
+    appName: 'Rainbowkit Demo',
+  };
+
   return (<>
     <Head>
       <title>Create Next App</title>
@@ -11,8 +20,12 @@ export default function App({ Component, pageProps: { session, ...pageProps } })
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <SessionProvider session={session}>
-      <Component {...pageProps} />
-    </SessionProvider>
+    <WagmiConfig client={wagmiClient}>
+      <RainbowKitProvider appInfo={demoAppInfo} chains={chains}>
+        <SessionProvider session={session}>
+          <Component {...pageProps} />
+        </SessionProvider>
+      </RainbowKitProvider>
+    </WagmiConfig>
   </>)
 }

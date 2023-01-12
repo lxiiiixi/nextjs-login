@@ -11,15 +11,18 @@
   "dependencies": {
     "@iconify/react": "^4.0.1",
     "@next/font": "13.1.1",
+    "@rainbow-me/rainbowkit": "workspace:*",
     "animate.css": "^4.1.1",
     "claymorphism-css": "^1.0.5",
     "eslint": "8.30.0",
     "eslint-config-next": "13.1.1",
+    "ethers": "^5.7.2",
     "next": "13.1.1",
     "next-auth": "^4.18.8",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.57.1"
+    "sass": "^1.57.1",
+    "wagmi": "^0.10.10"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
