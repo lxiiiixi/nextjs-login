@@ -10,10 +10,10 @@ export default function LoginByNext() {
         const { email, image, name } = session.user
         return (
             <div>
-                <div >
-                    Signed in as {email}
-                    <Image src={image} width={200} height={200} alt="Picture of the author" />
-                    UserName: {name}
+                <div className=" text-center">
+                    <p>Signed in as {email}</p>
+                    <Image src={image} width={200} height={200} className="rounded-full margin-center" alt="Picture of the author" />
+                    <p>UserName: {name}</p>
                 </div>
                 <div className="clay button bg-orange" onClick={() => signOut()}>Sign out</div>
             </div>

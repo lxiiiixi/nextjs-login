@@ -17,3 +17,8 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 ##
 
 Ui: clay.css https://github.com/codeAdrian/clay.css
+
+## Next Lists
+
+-   [SimpleWebAuthn](https://simplewebauthn.dev/)
+-   Login by web3-react
