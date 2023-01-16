@@ -5,6 +5,7 @@ import { Icon } from '@iconify/react';
 import dynamic from 'next/dynamic';
 
 const LoginByNext = dynamic(import("../layouts/LoginByNext"))
+const LoginByOry = dynamic(import("../layouts/LoginByOry"))
 const LoginByAuth = dynamic(import("../layouts/LoginByAuth"))
 const LoginByWagmi = dynamic(import("../layouts/LoginByWagmi"))
 const LoginByWeb3React = dynamic(import("../layouts/LoginByWeb3React"))
@@ -17,9 +18,10 @@ export default function Home() {
     <main className={styles.main}>
 
       <div className="card clay bg-pink text-xl" onClick={(e) => { setShow(e); setChildren(<LoginByAuth />) }}>Sign In By Auth</div>
+      <div className="card clay bg-pink text-xl" onClick={(e) => { setShow(e); setChildren(<LoginByNext />) }}>Sign In By Next Api</div>
+      <div className="card clay bg-pink text-xl" onClick={(e) => { setShow(e); setChildren(<LoginByOry />) }}>Sign In By Ory</div>
       <div className="card clay bg-pink text-xl" onClick={(e) => { setShow(e); setChildren(<LoginByWagmi />) }}>Sign In By Wagmi</div>
       <div className="card clay bg-pink text-xl" onClick={(e) => { setShow(e); setChildren(<LoginByWeb3React />) }}>Sign In By web3-react</div>
-      <div className="card clay bg-pink text-xl" onClick={(e) => { setShow(e); setChildren(<LoginByNext />) }}>Sign In By Next Api</div>
 
       {/* 一个简陋的自定义modal */}
       <div className="modal-wrap absolute top-0 left-0 h-full w-full flex-center text-center" style={{ display: showModal ? "flex" : "none" }}>
