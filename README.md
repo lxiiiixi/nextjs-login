@@ -37,3 +37,4 @@ Ui: clay.css https://github.com/codeAdrian/clay.css
 -   Login by web3-react
 -   Login by username and password
 -   Login via SMS
+-   bug: Server error after online
